@@ -1,0 +1,11 @@
+BufferSize: 1 bytes, Avg RTT: 2.79998 µs
+BufferSize: 2 bytes, Avg RTT: 2.7685 µs
+BufferSize: 4 bytes, Avg RTT: 2.79043 µs
+BufferSize: 8 bytes, Avg RTT: 2.7906 µs
+BufferSize: 16 bytes, Avg RTT: 2.78681 µs
+BufferSize: 32 bytes, Avg RTT: 2.84218 µs
+BufferSize: 64 bytes, Avg RTT: 3.12817 µs
+BufferSize: 128 bytes, Avg RTT: 3.24244 µs
+BufferSize: 256 bytes, Avg RTT: 3.78315 µs
+BufferSize: 512 bytes, Avg RTT: 3.95163 µs
+BufferSize: 1024 bytes, Avg RTT: 4.16835 µs

@@ -1,0 +1,6 @@
+Je ziet duidelijk dat de RTT bij 1 node met 2 cores veel lager is dan bij 2 nodes met elk 1 core.
+Dit verschil kan verklaard worden aan de hand van shared memory.
+
+Wanneer beide processen op 1 node draaien, delen de cores hetzelfde geheugen. De communicatie tussen de processen verloopt dan via shared memory, wat betekent dat data rechtstreeks in het geheugen kan worden gelezen en geschreven zonder dat het over een netwerk hoeft te gaan. Hierdoor zijn de lees- en schrijfbewerkingen veel sneller.
+
+Bij 2 nodes met elk 1 core bevinden de processen zich op verschillende fysieke machines. De data moet dan via het netwerk worden verstuurd, wat extra latency en communicatie-overhead veroorzaakt. Daarom is de round-trip-tijd bij deze configuratie merkbaar hoger.

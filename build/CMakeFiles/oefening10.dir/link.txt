@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-rpath -Wl,/usr/lib -Wl,--enable-new-dtags -Wl,--dependency-file=CMakeFiles/oefening10.dir/link.d CMakeFiles/oefening10.dir/src/oefening10/main.cpp.o -o bin/oefening10  /usr/lib/libmpi.so

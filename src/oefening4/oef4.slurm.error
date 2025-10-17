@@ -1,0 +1,5 @@
+✔ [Sep/25 15:34] vsc37967@tier2-p-login-4 ~ $ cat oefening4.slurm.e65160883
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) cluster/wice/batch

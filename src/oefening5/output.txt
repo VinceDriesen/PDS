@@ -1,0 +1,3 @@
+Op de grafiek zijn vier duidelijke stappen te zien. Deze kunnen worden verklaard door het verschil tussen de verschillende cachelevels en het DRAM-geheugen.
+Bij een klein aantal entries past de dataset volledig in L1-cache. Zodra de dataset groter wordt dan L1, moet de processor uit L2-cache lezen, wat merkbaar trager is. Hetzelfde gebeurt wanneer L2 volloopt en wordt overgegaan op L3-cache. Elke cachelaag is groter, maar ook trager, waardoor de gemiddelde toegangstijd per element telkens iets stijgt.
+De laatste sprong is het grootst: dit is het moment waarop de dataset niet meer in L3 past en de processor moet terugvallen op DRAM. Omdat DRAM veel hogere latency heeft dan caches, is dit verschil veel groter dan tussen de cachelevels onderling.

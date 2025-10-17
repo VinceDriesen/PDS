@@ -1,0 +1,40 @@
+Met 03:
+Start oefening2...
+Oefening 2
+19800000000
+19800000000
+19800000000
+19800000000
+19800000000
+#som1 0.209365 +/- 0.00461425 sec (5 measurements)
+19800000000
+19800000000
+19800000000
+19800000000
+19800000000
+#som2 7.33028 +/- 0.0714419 sec (5 measurements)
+
+
+
+Met O0:
+Start oefening2...
+Oefening 2
+19800000000
+19800000000
+19800000000
+19800000000
+19800000000
+#som1 2.73706 +/- 0.0363603 sec (5 measurements)
+19800000000
+19800000000
+19800000000
+19800000000
+19800000000
+#som2 8.8526 +/- 0.0912594 sec (5 measurements)
+
+
+Conclusie:
+Som1 (rijen doorlopen) is sneller omdat C++ arrays row-major zijn, wat leidt tot sequentiele geheugentoegang en minder cache misses.
+Som2 (kolommen doorlopen) veroorzaakt veel cache misses en blijft traag, zelfs met -O3.
+De compileroptimalisatie -O3 past technieken toe, wat Som1 extreem versnelt.
+Bij -O0 worden nauwelijks optimalisaties toegepast, waardoor vooral het geheugentoegangspatroon het verschil bepaalt.

@@ -1,0 +1,3 @@
+✔ [Sep/25 15:33] vsc37967@tier2-p-login-4 ~ $ python3 /data/leuven/303/vsc30380/slurmquote.py oefening4.slurm.o65160883 
+27.16 (P:batch,T:1.33,CPU:8@2.55,GPU:0) oefening4.slurm.o65160883
+27.16
