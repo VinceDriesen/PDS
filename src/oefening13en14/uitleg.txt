@@ -1,0 +1,9 @@
+Tussen oef 13 en oef 14 zit het verschil hoe je het eind resultaat krijgt.
+Bij 13 is dit door het resultaat van de verschillende threads uiteindelijk bij elkaar op te tellen.
+Bij 14 is dit door gebruik van een totaal resultaat en mutexen. Elke read bij een read write wordt de mutext dan toegepast.
+
+Ik zou denken dat theoretisch gezien zou 13 sneller moeten zijn dan 14, aangezien mutexen gebruik zwaarder is dan alles optellen op het einde.
+Echter zie ik het tegenovergestelde bij plot-2^15. main13 is altijd hoger dan main14, wat aangeeft dat 13 trager is dan 14.
+Bij plot2^28 zien wel amper iets van verschil tussen 13 en 14. Dus hierbij is het verschil te verwaarlozen.
+
+Dus ik zou zeggen dat het verschil tussen mutexen en geen mutexen klein genoeg is bij deze opdracht om te verwaarlozen. En dit zeker bij kleinerere intervallen.

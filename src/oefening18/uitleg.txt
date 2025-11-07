@@ -1,0 +1,6 @@
+Bij kleine multipliers (bv. 2) schrijven alle threads naar geheugenadressen binnen dezelfde cache line. Wanneer één thread die lijn aanpast, wordt ze dirty en moeten de andere threads wachten, wat de uitvoering sterk vertraagt. Daardoor is de uitvoertijd bij kleine multipliers hoog.
+
+Tot 2^5=32 liggen de offsets zo dicht bij elkaar dat ze vaak in dezelfde cache line terechtkomen. 
+Bij 2^5 (offsets 0, 32, 64, 96) bevinden sommige threads zich al deels in aparte cache lines, waardoor er minder false sharing optreedt en de uitvoering iets sneller wordt.
+
+Vanaf 2^6=64 schrijft elke thread naar een eigen cache line, waardoor false sharing verdwijnt en de uitvoeringstijd laag en constant blijft.

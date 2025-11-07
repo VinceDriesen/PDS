@@ -4010,3 +4010,42 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindMPI.cmake:1286 (try_compile)"
+      - "/usr/share/cmake/Modules/FindMPI.cmake:1330 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake/Modules/FindMPI.cmake:1653 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A"
+      binary: "/home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0d924/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_0d924.dir/build.make CMakeFiles/cmTC_0d924.dir/build
+        make[1]: Entering directory '/home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A'
+        Building CXX object CMakeFiles/cmTC_0d924.dir/test_mpi.cpp.o
+        /usr/bin/c++    -o CMakeFiles/cmTC_0d924.dir/test_mpi.cpp.o -c /home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A/test_mpi.cpp
+        /home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A/test_mpi.cpp:1:10: fatal error: mpi.h: No such file or directory
+            1 | #include <mpi.h>
+              |          ^~~~~~~
+        compilation terminated.
+        make[1]: *** [CMakeFiles/cmTC_0d924.dir/build.make:81: CMakeFiles/cmTC_0d924.dir/test_mpi.cpp.o] Error 1
+        make[1]: Leaving directory '/home/vince/School/PDS/oefeningen/build/CMakeFiles/CMakeScratch/TryCompile-CF027A'
+        make: *** [Makefile:134: cmTC_0d924/fast] Error 2
+        
+      exitCode: 2
+...

@@ -1,0 +1,21 @@
+    ./primes 8
+Aantal threads: 8
+Schedule: static | Tijd: 87.7945s | Aantal priemgetallen: 5761455
+Schedule: dynamic | Tijd: 79.3096s | Aantal priemgetallen: 5761455
+Schedule: guided | Tijd: 82.1259s | Aantal priemgetallen: 5761455
+󰪢 4m9s 󰜥 󰉋  ••/oefeningen/src/oefening19 󰜥 󰘬 main 
+    ./primes 4
+Aantal threads: 4
+Schedule: static | Tijd: 121.118s | Aantal priemgetallen: 5761455
+Schedule: dynamic | Tijd: 88.9108s | Aantal priemgetallen: 5761455
+Schedule: guided | Tijd: 77.5049s | Aantal priemgetallen: 5761455
+󰪢 4m47s 󰜥 󰉋  ••/oefeningen/src/oefening19 󰜥 󰘬 main 
+    
+
+Uit de resultaten blijkt dat static het traagst is, omdat elke thread een vast aantal opeenvolgende iteraties krijgt. Aangezien de berekeningstijd per getal verschilt, raken sommige threads eerder klaar en moeten andere wachten.
+
+Bij dynamic wordt de werklast tijdens de uitvoering verdeeld: zodra een thread klaar is, krijgt ze nieuwe iteraties toegewezen. Dit zorgt voor betere load balancing, maar iets meer overhead.
+
+De guided scheduling combineert de voordelen van beide: ze start met grotere blokken en gebruikt later kleinere, waardoor de overhead beperkt blijft maar de werkverdeling efficiënt blijft.
+
+De dynamische en vooral de guided scheduling leveren de beste prestaties bij ongelijke werklast. De statische scheduling is enkel efficiënt wanneer alle iteraties ongeveer evenveel tijd kosten.
